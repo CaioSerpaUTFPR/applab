@@ -1,0 +1,43 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>USUARIOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!--LISTA PARA LIBERAR USUARIOS NOVOS-->
+  <h4>LIBERAR NOVOS USUARIOS</h4>
+  <ion-list>
+    <ion-item *ngFor="let novo of novos">
+      <ion-button slot="end" (click)="mostrausuario(novo)">
+        <ion-icon name="search" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button slot="end">
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-label> {{ novo.nome }}</ion-label>
+      <ion-button slot="end">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!--LISTA DE USUARIOS JÁ LIBERADOS-->
+  <h4>GERENCIAR USUARIOS</h4>
+  <ion-list>
+    <ion-item *ngFor="let cadastrado of cadastrados">
+      <ion-button slot="end">
+        Editar
+        <ion-icon name="create" slot="end"></ion-icon>
+      </ion-button>
+      <ion-label>{{ cadastrado.nome }}</ion-label>
+      <ion-button slot="end">
+        <ion-icon name="close" slot="end"></ion-icon>
+        Excluir
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

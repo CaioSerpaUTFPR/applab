@@ -1,0 +1,32 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RELATORIOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>DATA INICIO</ion-label>
+    <ion-datetime
+      [(ngModel)]="dataini"
+      displayFormat="DD MM YY"
+      placeholder="Select Date"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>DATA FIM</ion-label>
+    <ion-datetime
+      [(ngModel)]="datafim"
+      displayFormat="DD MM YY"
+      placeholder="Select Date"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-button (click)="GerarRelatorio(dataini, datafim)"
+    >Gerar Relatório</ion-button
+  >
+</ion-content>

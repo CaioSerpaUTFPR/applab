@@ -1,0 +1,29 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button href="/novavid">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>VIDRARIAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let vidraria of vidrarias">
+      <ion-button slot="end">
+        Editar
+        <ion-icon name="create" slot="end"></ion-icon>
+      </ion-button>
+      <ion-label>{{ vidraria.nome }} Qntd: {{ vidraria.quantidade }}</ion-label>
+      <ion-button slot="end">
+        <ion-icon name="close" slot="end"></ion-icon>
+        Excluir
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

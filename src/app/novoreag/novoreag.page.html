@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admreagente"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Reagente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="spacer" style="width: 900px; height: 50.9896px;"></div>
+  <ion-item>
+    <ion-label position="stacked">NOME:</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">NUMERAÇÃO:</ion-label>
+    <ion-input type="text" [(ngModel)]="numeracao"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">QUANTIDADE:</ion-label>
+    <ion-input type="text" [(ngModel)]="quantidade"></ion-input>
+  </ion-item>
+  <div class="spacer" style="width: 900px; height: 120.9896px;"></div>
+  <ion-button (click)="novoReag(novoReag)">OK</ion-button>
+
+  <h4>respostinha</h4>
+  {{ resultado }}
+</ion-content>
